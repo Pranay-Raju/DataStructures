@@ -9,6 +9,7 @@ typedef struct node{
 struct Operations{
     void (*add)(Node*,int);
     Node* (*createNode)(int i);
+    void (*print)(Node* head);
 }op;
 typedef struct{
     Node* head;
@@ -21,20 +22,18 @@ Node* createNode_helper(int i){
     n->next = NULL;
     return n;
 }
-void add_helper(Node* head,int i){
-    if(head==NULL){
-        head = op.createNode(i);
+void add_helper(Node** head,int i){
+    if(*head==NULL){
+        *head = op.createNode(i);
     }
     else{
-        Node* ptr = head;
+        Node* ptr = *head;
         while(ptr->next != NULL)ptr = ptr->next;
         ptr->next = op.createNode(i);
     }
 }
-
-
-//MAIN
-/*int main(){
-    op.createNode = &createNode_helper;
-    op.add = &add_helper;
-}*/
+void print_helper(Node* head){
+    for(Node* ptr = head;ptr!=NULL;ptr=ptr->next){
+        printf("%d\t",ptr->d);
+    }
+}
