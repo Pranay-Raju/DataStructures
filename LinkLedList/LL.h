@@ -4,7 +4,7 @@ typedef struct node{
     struct node* next;
 }Node;
 struct Operations{
-    void (*add)(Node*,int);
+    void (*add)(Node**,int);
     Node* (*createNode)(int i);
     void (*print)(Node* head);
 }op;
