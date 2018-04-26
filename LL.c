@@ -34,7 +34,7 @@ void add_helper(Node* head,int i){
 
 
 //MAIN
-int main(){
+/*int main(){
     op.createNode = &createNode_helper;
     op.add = &add_helper;
-}
+}*/
