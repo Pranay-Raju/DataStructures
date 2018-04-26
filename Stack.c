@@ -44,7 +44,7 @@ struct opp{
     void (*create)(struct stk*);
     void (*print)(struct stk*);
 }op;
-int main()
+/*int main()
 {
     Stack *s = (Stack*) malloc(sizeof(Stack));
     op.create = &create_helper;
@@ -59,4 +59,4 @@ int main()
     printf(	"Hello, World!\n");
 
     return 0;
-}
+}*/
