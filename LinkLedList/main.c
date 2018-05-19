@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include"LL.h"
-int main()
-{
+int main(){
     List list;
     list_ptr=&list;
     list.print = &print_helper;
