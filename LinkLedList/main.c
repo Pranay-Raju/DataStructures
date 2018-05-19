@@ -7,7 +7,11 @@ int main()
     op.createNode = &createNode_helper;
     List list;
     list.head = NULL;
+
+    //to add data in a List
     op.add(&list,5);
-    op.print(list.head);
+
+    //to print the List
+    op.print(list);
     return 0;
 }

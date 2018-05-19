@@ -18,8 +18,8 @@ void add_helper(List* list,int i){
         ptr->next = op.createNode(i);
     }
 }
-void print_helper(Node* head){
-    for(Node* ptr = head;ptr!=NULL;ptr=ptr->next){
+void print_helper(List list){
+    for(Node* ptr = list.head;ptr!=NULL;ptr=ptr->next){
         printf("%d\t",ptr->d);
     }
 }

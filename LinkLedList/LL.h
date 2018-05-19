@@ -9,10 +9,10 @@ typedef struct{
 struct Operations{
     void (*add)(List*,int);
     Node* (*createNode)(int i);
-    void (*print)(Node* head);
+    void (*print)(List list);
 }op;
 
 //HELPER FUNCTIONS
 Node* createNode_helper(int);
 void add_helper(List*,int);
-void print_helper(Node*);
+void print_helper(List);
