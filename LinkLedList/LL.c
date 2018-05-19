@@ -8,12 +8,12 @@ Node* createNode_helper(int i){
     n->next = NULL;
     return n;
 }
-void add_helper(Node** head,int i){
-    if(*head==NULL){
-        *head = op.createNode(i);
+void add_helper(List* list,int i){
+    if(list->head==NULL){
+        list->head = op.createNode(i);
     }
     else{
-        Node* ptr = *head;
+        Node* ptr = list->head;
         while(ptr->next != NULL)ptr = ptr->next;
         ptr->next = op.createNode(i);
     }

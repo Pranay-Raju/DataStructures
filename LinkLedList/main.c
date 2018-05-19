@@ -7,8 +7,7 @@ int main()
     op.createNode = &createNode_helper;
     List list;
     list.head = NULL;
-    op.add(&list.head,5);
+    op.add(&list,5);
     op.print(list.head);
     return 0;
 }
-
