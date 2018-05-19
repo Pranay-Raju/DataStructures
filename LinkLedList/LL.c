@@ -8,18 +8,18 @@ Node* createNode_helper(int i){
     n->next = NULL;
     return n;
 }
-void add_helper(List* list,int i){
-    if(list->head==NULL){
-        list->head = op.createNode(i);
+void add_helper(int i){
+    if(list_ptr->head==NULL){
+        list_ptr->head = list_ptr->createNode(i);
     }
     else{
-        Node* ptr = list->head;
+        Node* ptr = list_ptr->head;
         while(ptr->next != NULL)ptr = ptr->next;
-        ptr->next = op.createNode(i);
+        ptr->next = list_ptr->createNode(i);
     }
 }
-void print_helper(List list){
-    for(Node* ptr = list.head;ptr!=NULL;ptr=ptr->next){
+void print_helper(){
+    for(Node* ptr = list_ptr->head;ptr!=NULL;ptr=ptr->next){
         printf("%d\t",ptr->d);
     }
 }

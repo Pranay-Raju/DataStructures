@@ -2,16 +2,17 @@
 #include"LL.h"
 int main()
 {
-    op.print = &print_helper;
-    op.add = &add_helper;
-    op.createNode = &createNode_helper;
     List list;
+    list_ptr=&list;
+    list.print = &print_helper;
+    list.add = &add_helper;
+    list.createNode = &createNode_helper;
     list.head = NULL;
 
     //to add data in a List
-    op.add(&list,5);
+    list.add(5);
 
     //to print the List
-    op.print(list);
+    list.print();
     return 0;
 }

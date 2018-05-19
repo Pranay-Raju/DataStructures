@@ -1,18 +1,21 @@
 // DATA MODELS
-typedef struct node{
+extern struct node;
+typedef struct node Node;//Simplifies Self Reference
+struct node{
     int d;
-    struct node* next;
-}Node;
-typedef struct{
+    Node* next;
+};
+
+extern struct LIST;
+typedef struct LIST List;//Simplifies Self Reference
+struct LIST{
     Node* head;
-}List;
-struct Operations{
-    void (*add)(List*,int);
+    void (*add)(int);
     Node* (*createNode)(int i);
-    void (*print)(List list);
-}op;
+    void (*print)();
+}*list_ptr;//global pointer that will access current operating object
 
 //HELPER FUNCTIONS
 Node* createNode_helper(int);
-void add_helper(List*,int);
-void print_helper(List);
+void add_helper(int);
+void print_helper();
